@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>counter</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        #box {
+            border: 2px solid black;
+            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px;
+            height: 250px;
+            border-radius: 25px;
+            padding: 20px;
+            margin-top: 200px;
+        }
+
+        #num {
+
+            font: 5em sans-serif;
+        }
+
+        .btn {
+            height: 50px;
+            width: 100px;
+            font: 2.5em sans-serif;
+            margin: 15px;
+            background: rgb(139, 221, 139);
+            border-radius: 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box">
+        <button onclick="decrement()" class="btn">-</button>
+        <h1 id="num">0</h1>
+        <button onclick="increment ()" class="btn">+</button>
+    </div>
+
+
+
+
+    <script>
+        var a = 0;
+        function increment() {
+            a++;
+            document.getElementById('num').innerHTML = a;
+        }
+
+        function decrement() {
+            if (a > 0) {
+                a--;
+                document.getElementById('num').innerHTML = a;
+
+            }
+            else {
+
+                document.getElementById('num').innerHTML = a;
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
